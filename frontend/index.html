@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FakeHunter | Detector de DeepFakes</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#111827">
+
+</head>
+
+<body>
+
+  <main class="container">
+
+    <h1>Detector de DeepFakes</h1>
+    <p class="description">
+      Sube una imagen de la que dudes o un video corto para revisar su autenticidad.
+    </p>
+    <section class="infoBox">
+    <p>
+        Mucho contenido en línea actualmente es generado con IA con el fin de engañar a las personas. Con este sitio web podrás revisar si una imagen o video podría ser fraudulento o generado por inteligencia artificial.
+        FakeHunter incluye capacidades muy limitadas de verificación de información mediante análisis de IA contextual, pero su principal objetivo es la detección forense de contenido multimedia generado o manipulado por IA.
+      </p>
+
+</section>
+
+    <label class="uploadZone" for="upldFile">
+      <div class="iconRow">
+        <div class="fileIcon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M14.568.075c2.202 1.174 5.938 4.883 7.432 6.881-1.286-.9-4.044-1.657-6.091-1.179.222-1.468-.185-4.534-1.341-5.702zm7.432 10.925v13h-20v-24h8.409c4.857 0 3.335 8 3.335 8 3.009-.745 8.256-.419 8.256 3zm-15 1.5c0 .828.672 1.5 1.501 1.5.827 0 1.499-.672 1.499-1.5s-.672-1.5-1.499-1.5c-.829 0-1.501.672-1.501 1.5zm10 6.5l-3.5-6-2.093 2.968-1.31-.968-3.097 4h10z"/>
+          </svg>
+
+        </div>
+
+        <div class="fileIcon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M14.568.074c2.202 1.174 5.938 4.885 7.432 6.882-1.286-.899-4.044-1.657-6.091-1.179.222-1.468-.185-4.535-1.341-5.703zm7.432 10.926v13h-20v-24h8.409c4.857 0 3.335 8 3.335 8 3.009-.745 8.256-.42 8.256 3zm-7 3.508l-6-3.528v7.02l6-3.492z"/>
+          </svg>
+
+        </div>
+
+      </div>
+
+      <p class="uploadTitle">
+        Toca aquí para subir un archivo
+      </p>
+
+      <p class="uploadText">
+        Imagen o video corto
+      </p>
+
+    </label>
+
+    <input id="upldFile" type="file" accept="image/*,video/*" />
+    <div class="imagepreview" id="imagepreview"></div>
+    <button id="analyzebt">Analizar</button>
+
+    <section class="result">
+
+      <h2>Resultado</h2>
+
+      <p id="resultText">
+        Sube un archivo para analizar.
+      </p>
+
+      <div id="barContainer">
+        <div id="barFill"></div>
+      </div>
+
+      <div id="barLabel"></div>
+
+    </section>
+
+    <button id="clearBtn" style="margin-top: 0.6rem; background:#374151;">
+      Limpiar
+    </button>
+
+  </main>
+
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+</body>
+
+</html>
